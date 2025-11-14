@@ -176,4 +176,10 @@ class AdminController {
         // On redirige vers la page d'administration.
         Utils::redirect("admin");
     }
+    public function displayMonitoring() : void 
+    {
+        $this->checkIfUserIsConnected();
+        $view = new View("Monitoring");
+        $view->render("monitoring");
+    }
 }
