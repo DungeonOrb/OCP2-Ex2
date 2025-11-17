@@ -23,13 +23,14 @@
             <a href="index.php">Articles</a>
             <a href="index.php?action=apropos">À propos</a>
             <?php 
-                // Si on est connecté, on affiche le bouton de déconnexion, sinon, on affiche le bouton de connexion : 
-                if (isset($_SESSION['user'])) {
-                    echo '<a href="index.php?action=disconnectUser">Déconnexion</a>';
-                }
+                // Si on est connecté, on affiche le bouton de déconnexion et monitoring, sinon, on affiche le bouton de connexion : 
                 if (isset($_SESSION['user'])) {
                     echo '<a href="index.php?action=monitoring">Monitoring</a>';
                 }
+                if (isset($_SESSION['user'])) {
+                    echo '<a href="index.php?action=disconnectUser">Déconnexion</a>';
+                }
+                
                 ?>
         </nav>
         <h1>Emilie Forteroche</h1>

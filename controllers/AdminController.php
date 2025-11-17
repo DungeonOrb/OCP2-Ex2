@@ -182,4 +182,16 @@ class AdminController {
         $view = new View("Monitoring");
         $view->render("monitoring");
     }
+    public function deleteComment() : void
+    {
+        $this->checkIfUserIsConnected();
+
+        $id = Utils::request("id", -1);
+
+        // On supprime l'article.
+        $commentmanager = new CommentManager();
+        $commentmanager->deleteComment($id);
+
+        Utils::redirect("admin");
+    }
 }

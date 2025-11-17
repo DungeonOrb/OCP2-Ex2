@@ -374,7 +374,7 @@ td {
 }
 
 th {
-    background: #eee;
+    background: #e3eb8a;
 }
 
 th a {
@@ -384,9 +384,9 @@ th a {
 
 
 tbody tr:nth-child(2n+1) {
-    background-color: white;
+    background-color: #99a140;
 }
 
 tbody tr:nth-child(2n) {
-    background-color: #f2f2f2;
+    background-color: #7a812b;
 }

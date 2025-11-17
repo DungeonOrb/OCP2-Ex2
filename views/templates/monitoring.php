@@ -1,4 +1,7 @@
+<!DOCTYPE html>
+<html>
 <link rel="stylesheet" href="./css/style.css">
+<body>
 <?php
 /*$data = [
     ["id" => 1, "name" => "Alice",   "score" => 88, "date" => "2024-03-04"],
@@ -51,14 +54,7 @@ function sortArrow($column, $sort, $order) {
         : " <span style='color:black'>▼</span>";
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sortable Table with Arrows</title>
-</head>
-<body>
 
-<h2>Sortable Table (Pure PHP + Sorting Arrows)</h2>
 
 <table>
     <thead>
