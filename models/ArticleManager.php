@@ -32,6 +32,8 @@ class ArticleManager extends AbstractEntityManager
         $result = $this->db->query($sql, ['id' => $id]);
         $article = $result->fetch();
         if ($article) {
+            $updateSql = "UPDATE article SET views = views + 1 WHERE id = :id";
+            $this->db->query($updateSql, ['id' => $id]);
             return new Article($article);
         }
         return null;
@@ -92,4 +94,9 @@ class ArticleManager extends AbstractEntityManager
         $sql = "DELETE FROM article WHERE id = :id";
         $this->db->query($sql, ['id' => $id]);
     }
+   /* public function addViewsById(int $idArticle) : void 
+    {
+        $sql = "UPDATE Article SET Views + 1 WHERE id_article = :idArticle";
+        $result = $this->db->query($sql, ['idArticle' => $idArticle]);
+    }*/
 }
